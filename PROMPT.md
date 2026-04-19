@@ -7,7 +7,7 @@ Paste this prompt into Claude (or any capable coding AI) to build the app from s
 ## The Prompt
 
 ```
-Build a minimal, mobile-first gym logging Progressive Web App called "Gym Logger".
+Build a minimal, mobile-first gym logging Progressive Web App called "Gym Logger AS".
 
 ---
 
