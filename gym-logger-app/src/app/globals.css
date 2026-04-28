@@ -226,7 +226,13 @@ input[type="number"] {
   border-radius: 4px;
 }
 
-/* ─── Body ─────────────────────────────────────────────────── */
+/* ─── Body & Background ──────────────────────────────────────── */
+@keyframes gradient-bg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -234,9 +240,22 @@ html {
 body {
   -webkit-tap-highlight-color: transparent;
   min-height: 100dvh;
-  background-color: var(--bg-primary);
+  /* Light Mode Bold Gradient */
+  background: linear-gradient(-45deg, #4facfe, #00f2fe, #43e97b, #38f9d7);
+  background-size: 400% 400%;
+  animation: gradient-bg 15s ease infinite;
+  background-attachment: fixed;
+  
   color: var(--text-primary);
   font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+}
+
+.dark body {
+  /* Dark Mode Bold Gradient */
+  background: linear-gradient(-45deg, #0f172a, #1e3a8a, #4c1d95, #312e81);
+  background-size: 400% 400%;
+  animation: gradient-bg 15s ease infinite;
+  background-attachment: fixed;
 }
 
 /* ─── Focus Styles ─────────────────────────────────────────── */
@@ -257,6 +276,10 @@ input:focus, select:focus, textarea:focus {
 
   .skeleton {
     animation: none;
+  }
+  
+  body, .dark body {
+    animation: none !important;
   }
 }
 
