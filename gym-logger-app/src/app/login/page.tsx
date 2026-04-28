@@ -1,11 +1,19 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
 
 export default function LoginPage() {
-  const { signInWithGoogle, signInWithGoogleRedirect, error, clearError } = useAuth();
+  const { user, signInWithGoogle, signInWithGoogleRedirect, error, clearError } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (user) {
+      router.replace('/');
+    }
+  }, [user, router]);
 
   const handlePopupLogin = async () => {
     setIsLoading(true);
