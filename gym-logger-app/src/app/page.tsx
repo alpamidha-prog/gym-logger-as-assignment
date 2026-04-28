@@ -184,10 +184,10 @@ export default function HomePage() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>
+          <h1 className="text-4xl font-bold tracking-wide" style={{ color: 'var(--text-primary)', fontFamily: 'var(--font-dancing-script)' }}>
             Today&apos;s Workout
           </h1>
-          <p className="text-sm mt-0.5" style={{ color: 'var(--text-tertiary)' }}>
+          <p className="text-lg font-medium mt-1" style={{ color: 'var(--text-primary)', opacity: 0.9 }}>
             {new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}
           </p>
         </div>

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Dancing_Script } from "next/font/google";
 import { Suspense } from "react";
 import "./globals.css";
 import { AuthContextProvider } from "@/contexts/AuthContext";
@@ -14,6 +14,11 @@ export const dynamic = 'force-dynamic';
 const geist = Geist({
   subsets: ["latin"],
   variable: "--font-geist-sans",
+});
+
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  variable: "--font-dancing-script",
 });
 
 export const metadata: Metadata = {
@@ -45,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geist.variable} antialiased`} suppressHydrationWarning>
+      <body className={`${geist.variable} ${dancingScript.variable} antialiased`} suppressHydrationWarning>
         <AuthContextProvider>
           <ThemeProvider>
             <SettingsProvider>

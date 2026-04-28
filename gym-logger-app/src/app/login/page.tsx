@@ -45,10 +45,10 @@ export default function LoginPage() {
             🏋️
           </div>
           <div className="text-center">
-            <h1 className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>
+            <h1 className="text-4xl font-bold" style={{ color: 'var(--text-primary)', fontFamily: 'var(--font-dancing-script)' }}>
               Gym Logger AS
             </h1>
-            <p className="text-sm mt-1" style={{ color: 'var(--text-tertiary)' }}>
+            <p className="text-base font-medium mt-1" style={{ color: 'var(--text-primary)', opacity: 0.85 }}>
               Track workouts & nutrition
             </p>
           </div>
