@@ -1,5 +1,7 @@
 # Gym Logger AS
 
+![Gym Logger Demo](./gym_logger_demo.png)
+
 A modern, full-stack fitness and diet tracking application built with Next.js, Firebase, and Tailwind CSS.
 
 ## 🚀 Features
